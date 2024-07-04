@@ -1,0 +1,53 @@
+# depslib dependency file v1.0
+1584209020 source:d:\utilizator windows10\desktop\proiect final pp\shared\classes\comentariu\main.cpp
+	<iostream>
+
+1718827088 source:d:\utilizator windows10\desktop\proiect final pp\shared\classes\comentariu\src\comentariu .cpp
+	"Comentariu .h"
+
+1718828978 d:\utilizator windows10\desktop\proiect final pp\shared\classes\comentariu\include\comentariu .h
+	<string>
+	"D:\Utilizator Windows10\Desktop\Proiect final PP\shared\classes\Articol.h"
+
+1718746060 d:\utilizator windows10\desktop\proiect final pp\shared\classes\articol.h
+	<iostream>
+	<string>
+	"Data.h"
+
+1718745959 d:\utilizator windows10\desktop\proiect final pp\shared\classes\data.h
+
+1719260916 source:d:\utilizator windows10\desktop\proiect final pp\shared\classes\comentariu\src\comentariu.cpp
+	"Comentariu.h"
+
+1719260696 d:\utilizator windows10\desktop\proiect final pp\shared\classes\comentariu\include\comentariu.h
+	<string>
+	"D:\Utilizator Windows10\Desktop\Proiect final PP\shared\classes\Articol.h"
+	"D:\Utilizator Windows10\Desktop\Proiect final PP\shared\classes\Data.h"
+
+1718825194 d:\utilizator windows10\desktop\proiect final pp\shared\classes\data.cpp
+	"Data.h"
+
+1719466316 source:d:\utilizator windows10\desktop\proiect final pp\shared\classes\comentariu\src\articol.cpp
+	"Articol.h"
+	<string>
+
+1719466349 d:\utilizator windows10\desktop\proiect final pp\shared\classes\comentariu\include\articol.h
+	<iostream>
+	<string>
+	"Data.h"
+
+1719261874 d:\utilizator windows10\desktop\proiect final pp\shared\classes\comentariu\include\data.h
+
+1719261914 source:d:\utilizator windows10\desktop\proiect final pp\shared\classes\comentariu\src\data.cpp
+	"Data.h"
+
+1719465801 source:d:\utilizator windows10\desktop\proiect final pp\shared\classes\comentariu\src\reactie.cpp
+	"Reactie.h"
+
+1719466422 d:\utilizator windows10\desktop\proiect final pp\shared\classes\comentariu\include\reactie.h
+	<string>
+	<list>
+	<map>
+	"Articol.h"
+	"Data.h"
+
