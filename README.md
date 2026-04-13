@@ -8,7 +8,7 @@ Un sistem modular de blogging dezvoltat în **C++**, conceput pentru gestionarea
 Sistemul este împărțit în două module logice pentru o separare clară a responsabilităților:
 
 ### 🛠️ Modulul 1: Administrare (Admin)
-Permite controlul total asupra conținutului editorial prin operațiuni de tip **CRUD**:
+Permite controlul total asupra conținutului editorial prin operațiuni de tip CRUD:
 * **Creare**: Adăugarea articolelor noi cu titlu, conținut și data postării.
 * **Vizualizare**: Citirea unui articol specific sau a întregii liste de postări.
 * **Editare**: Modificarea conținutului articolelor deja publicate.
@@ -17,7 +17,7 @@ Permite controlul total asupra conținutului editorial prin operațiuni de tip *
 ### 💬 Modulul 2: Interacțiune (Utilizator)
 Facilitează engagement-ul cititorilor:
 * **Comentarii**: Adăugarea și vizualizarea părerilor utilizatorilor pentru fiecare articol.
-* **Reacții**: Sistem de feedback rapid (**Love, Like, Dislike**) cu incrementare automată a contorului.
+* **Reacții**: Sistem de feedback rapid (Love, Like, Dislike) cu incrementare automată a contorului.
 
 ---
 
@@ -25,56 +25,40 @@ Facilitează engagement-ul cititorilor:
 
 Proiectul utilizează concepte de Programare Orientată pe Obiecte pentru o structură robustă:
 
-* **Clasa `Articol`**: Gestionează informațiile de bază (Titlu, Conținut, Data).
-* **Clasa `Data`**: O clasă utilitară pentru manipularea timpului (Zi, Lună, An).
-* **Clasa `Comentariu`**: Face legătura între utilizator și un articol specific.
-* **Clasa `Reacție`**: Utilizează `std::map` pentru a contoriza tipurile de reacții primite.
+* **Clasa Articol**: Gestionează informațiile de bază precum titlu, conținut și data publicării.
+* **Clasa Data**: O clasă utilitară pentru manipularea timpului (zi, lună, an).
+* **Clasa Comentariu**: Include textul comentariului, utilizatorul, data și asocierea cu articolul.
+* **Clasa Reacție**: Gestionează tipurile de reacții și numărul acestora folosind structuri de date de tip map și list.
 
 ---
 
 ## 💻 Utilizare din Terminal
 
 ### 🔧 Administrare (App 1)
-```bash
-# Vizualizarea tuturor articolelor
-./app_1.exe vizualizare_articole
+* **Vizualizarea tuturor articolelor**: `./app_1.exe vizualizare_articole`
+* **Adăugarea unui articol nou**: `./app_1.exe adaugare_articol <titlu> <continut> <zi> <luna> <an>`
+* **Editare**: `./app_1.exe editare_articol <titlu> <continut_nou>`
+* **Ștergere**: `./app_1.exe stergere_articol <titlu>`
 
-# Adăugarea unui articol nou
-./app_1.exe adaugare_articol "Titlu" "Continut" zi luna an
+### 🤝 Interacțiune (App 2)
+* **Vizualizarea comentariilor**: `./app_2.exe vizualizare_comentarii <titlu>`
+* **Adăugarea unui comentariu**: `./app_2.exe adaugare_comentariu <titlu> <text> <utilizator> <data>`
+* **Adăugarea unei reacții**: `./app_2.exe adaugare_reactie <titlu> <tip_reactie>`
 
-# Editarea unui articol
-./app_1.exe editare_articol "Titlu" "Continut_Nou"
+---
 
-🤝 Interacțiune (App 2)
-
-# Vizualizarea comentariilor
-./app_2.exe vizualizare_comentarii "Titlu_Articol"
-
-# Adăugarea unei reacții
-./app_2.exe adaugare_reactie "Titlu_Articol" "love"
-
-📂 Persistența Datelor
+## 📂 Persistența Datelor
 Informațiile sunt salvate permanent în fișiere text structurate:
 
-postări.txt - Baza de date a articolelor.
+* **postări.txt**: Stochează numărul de articole și detaliile fiecăruia (titlu, conținut, dată).
+* **comentarii.txt**: Jurnalul comentariilor organizate pe titluri de articole.
+* **reactii.txt**: Evidența reacțiilor și a utilizatorilor care au interacționat.
 
-comentarii.txt - Jurnalul comentariilor.
-
-reactii.txt - Evidența reacțiilor pe fiecare articol.
+---
 
 ## 🛠️ Instalare și Compilare
-Clonează repository-ul.
 
-Compilează codul sursă folosind un compilator C++ (ex: g++):
-
-Bash
-g++ main_admin.cpp -o app_1.exe
-g++ main_user.cpp -o app_2.exe
-
-### Ce trebuie să faci acum ca să arate profi pe GitHub:
-1. Mergi la repository-ul tău pe GitHub.
-2. Apasă pe **Add file** -> **Create new file**.
-3. Numește fișierul `README.md`.
-4. Lipeste codul de mai sus.
-5. Apasă pe **Commit changes**.
-
+1. **Obținerea surselor**: Descarcă și dezarhivează fișierele proiectului.
+2. **Compilare Modul Admin**: Rulează comanda `g++ main_admin.cpp -o app_1.exe`
+3. **Compilare Modul User**: Rulează comanda `g++ main_user.cpp -o app_2.exe`
+4. **Lansare**: Utilizează executabilele generate conform ghidului de utilizare de mai sus.
