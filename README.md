@@ -62,7 +62,7 @@ comentarii.txt - Jurnalul comentariilor.
 
 reactii.txt - Evidența reacțiilor pe fiecare articol.
 
-🛠️ Instalare și Compilare
+## 🛠️ Instalare și Compilare
 Clonează repository-ul.
 
 Compilează codul sursă folosind un compilator C++ (ex: g++):
